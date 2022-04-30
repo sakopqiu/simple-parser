@@ -12,11 +12,31 @@ const Spec = [
     [/^\(/, "("],
     [/^\)/, ")"],
     [/^,/, ","],
+    [/^\./, "."],
+    [/^\[/, "["],
+    [/^\]/, "]"],
 
     [/^\blet\b/, "let"],
+    [/^\bif\b/, "if"],
+    [/^\belse\b/, "else"],
+    [/^\btrue\b/, "true"],
+    [/^\bfalse\b/, "false"],
+    [/^\bnull\b/, "null"],
+    [/^\bwhile\b/, "while"],
+    [/^\bdo\b/, "do"],
+    [/^\bfor\b/, "for"],
+    [/^\bdef\b/, "def"],
+    [/^\breturn\b/, "return"],
+    [/^\bclass\b/, "class"],
+    [/^\bextends\b/, "extends"],
+    [/^\bsuper\b/, "super"],
+    [/^\bnew\b/, "new"],
+    [/^\bthis\b/, "this"],
 
     [/^\d+/, 'NUMBER'],
     [/^\w+/, 'IDENTIFIER'],
+
+    [/^[=!]=/, 'EQUALITY_OPERATOR'],
 
     [/^=/, 'SIMPLE_ASSIGN'],
     [/^[\*\/\+\-]=/, 'COMPLEX_ASSIGN'],
@@ -24,6 +44,12 @@ const Spec = [
     [/^[+\-]/, 'ADDITIVE_OPERATOR'],
 
     [/^[*\/]/, 'MULTIPLICATIVE_OPERATOR'],
+    [/^[<>]=?/, 'RELATIONAL_OPERATOR'],
+
+    [/^&&/, 'LOGICAL_AND'],
+    [/^\|\|/, 'LOGICAL_OR'],
+    [/^!/, 'LOGICAL_NOT'],
+
     [/^"[^"]*"/, 'STRING'],
     [/^'[^']*'/, 'STRING'],
 ]
